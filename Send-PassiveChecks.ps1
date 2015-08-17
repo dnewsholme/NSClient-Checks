@@ -36,6 +36,6 @@ function Send-PassiveCheck {
     #check if servicecheck or hostcheck result and set output text appropriately
     $processcommand = "PROCESS_SERVICE_CHECK_RESULT"
     #Set the output message to return via nsca
-    $output = '{0} {1};{2};{3};{4};{5}' -f $timestamp,$processcommand,$env:computername;$servicedescription;$returncode;$outputmessage
+    $output = '[{0}] {1};{2};{3};{4};{5}' -f $timestamp,$processcommand,$env:computername;$servicedescription;$returncode;$outputmessage
     return $output 
 }
